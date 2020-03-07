@@ -1,0 +1,20 @@
+---
+- name: Install httpd
+  hosts: db
+  gather_facts: yes
+  tasks:
+   - name: httpd installation for db servers
+     yum:
+      name:
+       - httpd
+       - wget
+      state: present
+
+- name: Install wget
+  hosts: monitor
+  tasks:
+   - name: Install wget in the nodes mentioned in the hosts
+     yum:
+      name: wget
+      state: present
+
