@@ -13,7 +13,7 @@
 - name: Install wget
   hosts: monitor
   tasks:
-   - name: Install wget
+   - name: Install wget in the nodes mentioned in the hosts
      yum:
       name: wget
       state: present
