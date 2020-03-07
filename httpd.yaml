@@ -3,7 +3,7 @@
   hosts: db
   gather_facts: yes
   tasks:
-   - name: httpd installation 
+   - name: httpd installation for db servers
      yum:
       name:
        - httpd
